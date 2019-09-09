@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(username: "zahbdy", email: "zahbdy@gmail.com")
+# user = User.create(username: "zahbdy", email: "zahbdy@gmail.com")
 question1 = Question.create(question: "The cardio vascular system is also known as?")
 question2 = Question.create(question: "The Pulmonary System has many chambers. how many are there?")
 

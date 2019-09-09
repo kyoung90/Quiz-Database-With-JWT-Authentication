@@ -1,10 +1,16 @@
 class QuestionController < ApplicationController
+    before_action :authenticate_user!
 
     def show
         @question = Question.find_by(id: params[:id])
-        if !@question 
+        if !@question
             render :json => {error: "Question not found"}
         end 
+        
+        if !user_signed_in?
+            render :json => {error: "Must be logged in!"}
+        end 
+
 
         respond_to do |format|
             format.html  # index.html.erb
@@ -14,6 +20,10 @@ class QuestionController < ApplicationController
 
     def index
         @questions = Question.all
+
+        if !user_signed_in?
+            render :json => {error: "Must be logged in!"}
+        end 
 
         respond_to do |format|
             format.html  # index.html.erb
