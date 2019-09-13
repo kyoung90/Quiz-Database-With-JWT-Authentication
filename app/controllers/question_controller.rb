@@ -25,6 +25,10 @@ class QuestionController < ApplicationController
             render :json => {error: "Must be logged in!"}
         end 
 
+        if params[:difficulty]
+            @questions = @questions.select {|question| question.difficulty === params[:difficulty]}
+        end 
+
         respond_to do |format|
             format.html  # index.html.erb
             format.json  { render :json => @questions, include: "**" }
