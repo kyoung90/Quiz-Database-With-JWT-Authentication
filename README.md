@@ -48,6 +48,8 @@ RAILS_SERVE_STATIC_FILES=true
 DEVISE_JWT_SECRET_KEY='key'
 ```
 
+Replace *key* with the result from your rake secret command.
+
 ### Step 4: Setting Up The Database
 
 To create our database, inside the root folder, we just need to type in the terminal:
