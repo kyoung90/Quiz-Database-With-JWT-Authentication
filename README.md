@@ -76,7 +76,7 @@ This runs the rails server, usually on localhost:3000.
 
 ### Step 6: Example On How To Use This Project
 
-Inside the example folder, there is a python file. It's very easy to read and get a good idea on how to use get data from the server running.
+Inside the examples folder, there is a Python file. It's very easy to read and get a good idea on how to use get data from the server running.
 
 ## Contributing
 
